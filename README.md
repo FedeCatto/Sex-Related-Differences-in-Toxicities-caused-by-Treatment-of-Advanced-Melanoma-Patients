@@ -1,17 +1,67 @@
-# Sex-Related Differences in Toxicities caused by Treatment of Advanced Melanoma Patients
-[Publication](https://osf.io/3t6fk/)
+# Sex-Related Differences in Toxicities from Advanced Melanoma Treatment
 
-This project presents a systematic review and meta-analysis aimed at investigating sex-based differences in the manifestation of adverse events (AEs) caused by modern treatments for advanced melanoma, specifically immunotherapy and targeted therapy. These therapies have transformed the prognosis of melanoma patients, yet they are frequently associated with toxicities that can impact treatment adherence and quality of life. Prior studies suggested that female patients may be at higher risk of AEs under cytotoxic therapies. The primary objective of this meta-analysis is to determine whether sex significantly influences the occurrence of side effects from immunotherapy and targeted therapy, thereby allowing clinicians to optimize treatment strategies and enhance patient quality of life.
-A comprehensive literature search was conducted using databases such as PubMed and Embase, including all independent studies published up to April 2024 that reported sex-specific toxicity data in patients with melanoma as the primary disease. Data extraction focused on obtaining sufficient information to estimate Odds Ratios (ORs) with 95% Confidence Intervals (CIs), or raw data on male and female patients with or without AEs. Due to limited availability of general AE data, the analysis focused on specific categories such as dermatologic, thyroid-related, and grade III–IV AEs.
-Statistical analysis was performed using random-effects models to calculate summary odds ratios (sORs) and corresponding CIs. Study heterogeneity was assessed using the I² statistic, and publication bias was evaluated via Egger’s and Begg’s tests. Sensitivity analyses, including leave-one-out methods, were used to explore the sources of heterogeneity.
+> Systematic review · meta-analysis · biostatistics · immunotherapy · published in *British Journal of Cancer*
 
-Key findings revealed significant sex-related differences in treatment toxicity:
-- Female patients exhibited a higher risk of developing thyroid-related adverse events.
-- Women were also more likely to experience dermatologic and grade III–IV toxicities.
-- Specifically, for dermatologic AEs, the sOR was 1.31 (95% CI [1.06–1.61]), indicating a significantly greater risk for females.
-- Heterogeneity was not significant for thyroid AEs (I² = 29.39%), and moderate for dermatologic AEs.
-- No significant evidence of publication bias was found for the analyzed AE categories.
+A systematic review and meta-analysis investigating whether biological sex influences the risk of adverse events (AEs) in patients receiving immunotherapy or targeted therapy for advanced melanoma. The study is **peer-reviewed and published** — [British Journal of Cancer, 2025](https://doi.org/10.1038/s41416-025-03266-0).
 
-This study contributes to the growing body of evidence on sex-specific responses to advanced melanoma therapies. It is one of the first to systematically examine modern treatments through this lens and confirms that female sex is associated with a higher likelihood of certain adverse events. These results emphasize the relevance of statistical and machine learning models in biomedical research and support the inclusion of sex-based considerations in clinical decision-making and future studies.
-Limitations include the retrospective nature of the analysis and the limited ability to extract general AE data from many studies, which constrained the analysis to specific toxicity categories.
- (All the statistical analisys were performed using R.)
+---
+
+## Clinical Background
+
+Immunotherapy and targeted therapy have transformed the prognosis of advanced melanoma, but both are associated with toxicities that affect treatment adherence and patient quality of life. Prior evidence from cytotoxic therapy suggested female patients may experience higher rates of AEs — this study systematically tests whether the same pattern holds for modern treatment regimens.
+
+---
+
+## Methods
+
+**Literature search:** PubMed and Embase, all independent studies published up to April 2024 reporting sex-specific toxicity data in melanoma as the primary disease.
+
+**Inclusion criteria:** studies providing sufficient data to estimate Odds Ratios (ORs) with 95% Confidence Intervals, or raw male/female counts with and without AEs.
+
+**AE categories analysed:** dermatologic, thyroid-related, and grade III–IV toxicities — chosen due to limited availability of general AE data across studies.
+
+**Statistical framework:**
+
+| Component | Approach |
+|-----------|----------|
+| Effect size | Summary Odds Ratios (sORs) with 95% CIs |
+| Pooling model | Random-effects meta-analysis |
+| Heterogeneity | I² statistic |
+| Publication bias | Egger's and Begg's tests |
+| Sensitivity analysis | Leave-one-out method to identify heterogeneity sources |
+
+All analyses performed in **R**.
+
+---
+
+## Key Findings
+
+Female patients showed consistently higher risk of specific AE categories:
+
+| Adverse Event Category | Finding |
+|------------------------|---------|
+| Thyroid-related AEs | Significantly higher risk in females; low heterogeneity (I² = 29.39%) |
+| Dermatologic AEs | sOR = 1.31 (95% CI: 1.06–1.61) — significantly greater risk in females; moderate heterogeneity |
+| Grade III–IV AEs | Higher occurrence in female patients |
+
+No significant publication bias detected across analysed AE categories.
+
+---
+
+## Significance
+
+This is one of the first studies to systematically examine sex-based toxicity differences specifically for **modern melanoma therapies** — immunotherapy and targeted agents — rather than traditional cytotoxic regimens. The findings provide quantitative evidence supporting sex-stratified monitoring protocols and inform clinical decision-making around treatment adherence and supportive care.
+
+---
+
+## Limitations
+
+- **Retrospective design** — analysis is constrained by what primary studies reported; prospective sex-stratified trials would provide stronger causal evidence
+- **Restricted AE scope** — limited availability of general AE data across studies prevented a broader toxicity analysis; findings are specific to the categories where sufficient data existed
+- **Confounding** — differences in treatment dosing, adherence, or comorbidity profiles by sex could not be fully controlled across heterogeneous study populations
+
+---
+
+## Stack
+
+`R` `meta-analysis` `random-effects models` `systematic review` `biostatistics` `oncology` `PRISMA` `epidemiology`
